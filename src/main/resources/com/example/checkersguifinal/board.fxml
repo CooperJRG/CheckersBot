@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="1000.0" prefWidth="1600.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.checkersguifinal.Controller">
+   <children>
+      <Rectangle arcWidth="5.0" fill="#ffedd6" height="800.0" layoutX="700.0" layoutY="100.0" stroke="#b27e7e" strokeType="INSIDE" strokeWidth="0.0" width="800.0" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0" />
+      <Text fill="#f5f2c9" layoutX="189.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Checkers V1.2.0" textAlignment="JUSTIFY" wrappingWidth="361.6909866333008" AnchorPane.leftAnchor="169.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="Avenir Book" size="50.0" />
+         </font>
+      </Text>
+      <Text fill="#f5f2c9" layoutX="355.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By Cooper Gilkey" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="118.0">
+         <font>
+            <Font name="Avenir Book" size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="buttonText" fill="#f5f2c9" layoutX="213.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I would like to play as..." AnchorPane.leftAnchor="217.0" AnchorPane.topAnchor="194.0">
+         <font>
+            <Font name="Avenir Book" size="30.0" />
+         </font>
+      </Text>
+      <Button fx:id="redButton" layoutX="473.0" layoutY="247.0" mnemonicParsing="false" onAction="#pickRed" text="Red" AnchorPane.leftAnchor="477.0" AnchorPane.topAnchor="247.0">
+         <font>
+            <Font name="Avenir Book" size="20.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <ColorInput />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.6901960968971252" green="0.16470588743686676" blue="0.20000000298023224" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Button>
+      <Button fx:id="blackButton" layoutX="213.0" layoutY="247.0" mnemonicParsing="false" onAction="#pickBlack" text="Black" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="247.0">
+         <font>
+            <Font name="Avenir Book" size="20.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <ColorInput />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.2980392277240753" green="0.33725491166114807" blue="0.30980393290519714" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Button>
+      <Group fx:id="squarePieces" layoutX="700.0" layoutY="100.0" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Rectangle fx:id="rectangle00" arcWidth="5.0" fill="#b5726f" height="100.0" layoutY="700.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="200.0" layoutY="700.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="400.0" layoutY="700.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="600.0" layoutY="700.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="100.0" layoutY="600.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="300.0" layoutY="600.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="500.0" layoutY="600.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="700.0" layoutY="600.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutY="500.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="200.0" layoutY="500.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="400.0" layoutY="500.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="600.0" layoutY="500.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="100.0" layoutY="400.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="300.0" layoutY="400.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="500.0" layoutY="400.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="700.0" layoutY="400.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutY="300.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="200.0" layoutY="300.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="400.0" layoutY="300.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="600.0" layoutY="300.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="100.0" layoutY="200.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="300.0" layoutY="200.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="500.0" layoutY="200.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="700.0" layoutY="200.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutY="100.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="200.0" layoutY="100.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="400.0" layoutY="100.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="600.0" layoutY="100.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle fx:id="rectangle28" arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="100.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle fx:id="rectangle29" arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="300.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle fx:id="rectangle30" arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="500.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle fx:id="rectangle31" arcWidth="5.0" fill="#b5726f" height="100.0" layoutX="700.0" onMouseClicked="#piecePlaced" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Group fx:id="checkerImages" layoutX="3.0" layoutY="3.0">
+               <children>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutY="700.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Black_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="200.0" layoutY="700.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Black_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="400.0" layoutY="700.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Black_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="600.0" layoutY="700.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Black_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="100.0" layoutY="600.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Black_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="300.0" layoutY="600.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Black_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="500.0" layoutY="600.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Black_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="700.0" layoutY="600.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Black_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutY="500.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Black_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="200.0" layoutY="500.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Black_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="400.0" layoutY="500.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Black_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="600.0" layoutY="500.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Black_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="100.0" layoutY="400.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Empty_Space.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="300.0" layoutY="400.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Empty_Space.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="500.0" layoutY="400.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Empty_Space.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="700.0" layoutY="400.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Empty_Space.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutY="300.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Empty_Space.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="200.0" layoutY="300.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Empty_Space.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="400.0" layoutY="300.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Empty_Space.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="600.0" layoutY="300.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Empty_Space.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="100.0" layoutY="200.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Red_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="300.0" layoutY="200.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Red_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="500.0" layoutY="200.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Red_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="700.0" layoutY="200.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Red_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutY="100.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Red_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="200.0" layoutY="100.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Red_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="400.0" layoutY="100.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Red_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="600.0" layoutY="100.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Red_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="100.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Red_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="300.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Red_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="500.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Red_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="700.0" onMouseClicked="#pieceSelected" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Red_Checker.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="gameLost" fill="#f5f2c9" layoutX="88.0" layoutY="445.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="4.0" text="Game Lost" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="Avenir Next Condensed Bold" size="150.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="gameWon" fill="#f5f2c9" layoutX="73.0" layoutY="445.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="4.0" text="Game Won" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="Avenir Next Condensed Bold" size="150.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="gameDrawn" fill="#f5f2c9" layoutX="13.0" layoutY="445.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="4.0" text="Game Drawn" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="Avenir Next Condensed Bold" size="150.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+         </children>
+      </Group>
+      <ProgressBar fx:id="evalBar" layoutX="577.0" layoutY="499.0" prefWidth="200.0" progress="0.5" rotate="-90.0" scaleX="4.0" scaleY="10.0" style="visibility: false;" stylesheets="@evalBar.css" AnchorPane.rightAnchor="823.0" />
+      <Group fx:id="computerVision" layoutX="53.0" layoutY="213.0" style="visibility: false;" visible="false" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="56.0" AnchorPane.topAnchor="300.0">
+         <children>
+            <Text fx:id="computerTitle" fill="#f5f2c9" layoutX="12.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Computer Vision V0.1.0">
+               <font>
+                  <Font name="Avenir Next Bold" size="50.0" />
+               </font>
+            </Text>
+            <Text fill="#f5f2c9" layoutX="163.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Evaluation: " textAlignment="RIGHT">
+               <font>
+                  <Font name="Avenir Book" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="evalString" fill="#f5f2c9" layoutX="395.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Avenir Book" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="moveCount" fill="#f5f2c9" layoutX="99.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Moves Made: " textAlignment="RIGHT">
+               <font>
+                  <Font name="Avenir Book" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="moveCountString" fill="#f5f2c9" layoutX="395.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Avenir Book" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#f5f2c9" layoutX="59.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount of Games Searched: " textAlignment="RIGHT">
+               <font>
+                  <Font name="Avenir Book" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="gamesSearchedString" fill="#f5f2c9" layoutX="395.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Avenir Book" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#f5f2c9" layoutX="216.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Elapsed: " textAlignment="RIGHT">
+               <font>
+                  <Font name="Avenir Book" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="timeString" fill="#f5f2c9" layoutX="395.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Avenir Book" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#f5f2c9" layoutX="207.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Depth: " textAlignment="RIGHT">
+               <font>
+                  <Font name="Avenir Book" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="depthString" fill="#f5f2c9" layoutX="395.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Avenir Book" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#f5f2c9" layoutX="3.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Best Move For Computer: " textAlignment="RIGHT">
+               <font>
+                  <Font name="Avenir Book" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="bestMoveString" fill="#f5f2c9" layoutX="395.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Avenir Book" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Text fill="#f5f2c9" layoutX="137.0" layoutY="849.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How much time for the AI to make a move?" AnchorPane.bottomAnchor="148.99999618530273" AnchorPane.leftAnchor="137.0">
+         <font>
+            <Font name="Avenir Book" size="24.0" />
+         </font>
+      </Text>
+      <Spinner fx:id="secondsSpinner" editable="true" layoutX="294.0" layoutY="874.0" AnchorPane.bottomAnchor="106.78399658203125" AnchorPane.leftAnchor="294.0" />
+      <Button fx:id="undoButton" layoutX="1059.0" layoutY="915.0" mnemonicParsing="false" onAction="#undoMove" text="Undo Move" textFill="#363636" visible="false" AnchorPane.bottomAnchor="38.0" AnchorPane.rightAnchor="458.5">
+         <font>
+            <Font name="Avenir Book" size="20.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <ColorInput />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.2980392277240753" green="0.33725491166114807" blue="0.30980393290519714" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Button fx:id="newGameButton" layoutX="1060.0" layoutY="41.0" mnemonicParsing="false" onAction="#newGame" text="New Game" textFill="#363636" visible="false" AnchorPane.rightAnchor="458.5" AnchorPane.topAnchor="38.0">
+         <font>
+            <Font name="Avenir Book" size="20.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <ColorInput />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.2980392277240753" green="0.33725491166114807" blue="0.30980393290519714" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
